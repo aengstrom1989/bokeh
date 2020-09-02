@@ -34,6 +34,15 @@ jobs:
       - name: Upgrade npm
         shell: bash
         run: |
+          #ls -1 "C:\\Program Files (x86)\\Google\\Chrome\\Application\\"
+          #ls -1 "C:/Program Files (x86)/Google/Chrome/Application/"
+          find "C:\\Program Files (x86)\\Google" -iname chrome
+          echo $(which chrome)
+          echo $(which chrome.exe)
+          echo $(which google-chrome)
+          echo $(which google-chrome.exe)
+          echo $(which GoogleChrome)
+          echo $(which GoogleChrome.exe)
           npm install -g npm
 
       - name: Install dependencies
